@@ -62,26 +62,38 @@ function Dashboard() {
     <div>
       <Sidebar />
       <div className="p-4 sm:ml-64">
-        <div className="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-blue-200">
+        <div className="flex items-center justify-center h-48 mb-4 rounded bg-blue-200">
           <p className="text-5xl text-black">Dashboard</p>
         </div>
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {cards.map((card, index) => (
             <div
               key={index}
-              className="card bg-white shadow-lg rounded-lg overflow-hidden my-4"
+              className="card bg-white sm:p-2 flex flex-row md:flex-row shadow-lg rounded-lg overflow-hidden"
             >
-              <div className="p-4 flex justify-between items-center">
-                <div>
-                  <h2 className="font-bold text-2xl mb-2">{card.name}</h2>
-                  <button
-                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                    onClick={card.action}
-                  >
-                    Show Details
-                  </button>
+              <div className="p-4  flex flex-row    sm:items-start">
+                <div className="mb-4 sm:mb-0">
+                  <div>
+                    <h2 className="font-bold text-xl sm:text-2xl mb-2">
+                      {card.name}
+                    </h2>
+                  </div>
+
+                  <div className="">
+                    <h3 className="text-4xl sm:text-4xl font-bold  ">
+                      {card.number}
+                    </h3>
+                  </div>
+
+                  <div>
+                    <button
+                      className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full sm:w-auto "
+                      onClick={card.action}
+                    >
+                      Show Details
+                    </button>
+                  </div>
                 </div>
-                <h3 className="text-4xl font-bold">{card.number}</h3>
               </div>
             </div>
           ))}
