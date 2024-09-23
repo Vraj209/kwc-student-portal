@@ -67,7 +67,7 @@ function Dashboard() {
           response.data.filter((user) => user.Status === "Work Permit").length
         );
         setStudentPermitHolder(
-          response.data.filter((user) => user.Mis === "Student").length
+          response.data.filter((user) => user.Status === "Student Visa").length
         );
         setNumberOfMIS(
           response.data.filter((user) => user.Mis === "Yes").length
