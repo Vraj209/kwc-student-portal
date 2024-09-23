@@ -9,6 +9,8 @@ function Dashboard() {
   const [numberOfFemale, setNumberOfFemale] = useState(0);
   const [numberOfSatsangi, setNumberOfSatsangi] = useState(0);
   const [numberOfMIS, setNumberOfMIS] = useState(0);
+  const [workPermitHolder, setWorkPermitHolder] = useState(0);
+  const [studentPermitHolder, setStudentPermitHolder] = useState(0);
   const totalStudent = () => {
     navigate("/student-directory");
   };
@@ -24,12 +26,24 @@ function Dashboard() {
   const misStudent = () => {
     navigate("/misStudent");
   };
+  const workPermit = () => {
+    navigate("/workPermit");
+  };
+  const studentPermit = () => {
+    navigate("/studentPermit");
+  };
   const cards = [
     { name: "Total Student", number: numberOfStudents, action: totalStudent },
     { name: "Male", number: numberOfMale, action: maleStudent },
     { name: "Female", number: numberOfFemale, action: femaleStudent },
     { name: "Satsangi", number: numberOfSatsangi, action: satsangiStudent },
     { name: "MIS", number: numberOfMIS, action: misStudent },
+    { name: "Work Permit", number: workPermitHolder, action: workPermit },
+    {
+      name: "Student Permit",
+      number: studentPermitHolder,
+      action: studentPermit,
+    },
   ];
 
   useEffect(() => {
@@ -48,6 +62,12 @@ function Dashboard() {
         );
         setNumberOfSatsangi(
           response.data.filter((user) => user.Satsangi === "Yes").length
+        );
+        setWorkPermitHolder(
+          response.data.filter((user) => user.Status === "Work Permit").length
+        );
+        setStudentPermitHolder(
+          response.data.filter((user) => user.Mis === "Student").length
         );
         setNumberOfMIS(
           response.data.filter((user) => user.Mis === "Yes").length

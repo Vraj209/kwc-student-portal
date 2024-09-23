@@ -1,14 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 function Sidebar() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
   return (
     <>
       <button
-        data-drawer-target="logo-sidebar"
-        data-drawer-toggle="logo-sidebar"
-        aria-controls="logo-sidebar"
-        type="button"
-        className="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+       onClick={toggleSidebar}
+       aria-controls="logo-sidebar"
+       type="button"
+       className="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+  
       >
         <span className="sr-only">Open sidebar</span>
         <svg
@@ -38,7 +43,7 @@ function Sidebar() {
             </span>
           </Link>
           <ul className="space-y-2 font-medium">
-          <li>
+            <li>
               <Link
                 to="/dashboard"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
@@ -112,9 +117,6 @@ function Sidebar() {
                 <span className="ms-3">Seva Details</span>
               </Link>
             </li>
-          
-
-          
           </ul>
         </div>
       </aside>
