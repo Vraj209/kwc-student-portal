@@ -20,6 +20,8 @@ import SevaPage from "./pages/SevaPage.jsx";
 import SigninPage from "./pages/SigninPage.jsx";
 import TableLayout from "./components/TableLayout/index.jsx";
 import SevaTableMaster from "./components/SevaTableMaster/SevaTableMaster.jsx";
+import StudyPermitHolder from "./components/Dashboard/StudyPermitHolder.jsx";
+import WorkPermitHolder from "./components/Dashboard/WorkPermitHolder.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <HomePage /> },
@@ -58,6 +60,14 @@ const router = createBrowserRouter([
   {
     path: "/misStudent",
     element: <MisStudent />,
+  },
+  {
+    path: "/studyPermit",
+    element : <StudyPermitHolder/>
+  },
+  {
+    path: "/workPermit",
+    element: <WorkPermitHolder />,
   },
   {
     path: "/sevaTable",

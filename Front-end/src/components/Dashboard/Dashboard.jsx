@@ -30,7 +30,7 @@ function Dashboard() {
     navigate("/workPermit");
   };
   const studentPermit = () => {
-    navigate("/studentPermit");
+    navigate("/studyPermit");
   };
   const cards = [
     { name: "Total Student", number: numberOfStudents, action: totalStudent },
