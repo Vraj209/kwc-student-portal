@@ -22,6 +22,7 @@ import TableLayout from "./components/TableLayout/index.jsx";
 import SevaTableMaster from "./components/SevaTableMaster/SevaTableMaster.jsx";
 import StudyPermitHolder from "./components/Dashboard/StudyPermitHolder.jsx";
 import WorkPermitHolder from "./components/Dashboard/WorkPermitHolder.jsx";
+import SamparkPage from "./pages/SamparkPage.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <HomePage /> },
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
   {
     path: "/sevaPage",
     element: <SevaPage />,
+  },
+  {
+    path: "/sampark-karyakars",
+    element: <SamparkPage />,
   },
   {
     path: "/signin",
@@ -63,7 +68,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/studyPermit",
-    element : <StudyPermitHolder/>
+    element: <StudyPermitHolder />,
   },
   {
     path: "/workPermit",

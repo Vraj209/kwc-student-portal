@@ -4,8 +4,7 @@ const userSchema = new mongoose.Schema(
   {
     Image: {
       type: String,
-      required:true,
-    
+      required: true,
     },
     FirstName: {
       type: String,
@@ -81,6 +80,22 @@ const userSchema = new mongoose.Schema(
     Status: {
       type: String,
     },
+    Sampark_Karyaker: {
+      type: String,
+      default: "No",
+    },
+    isAssign: {
+      type: "boolean",
+      default: false,
+    },
+    Sampark_Karyaker_Name: {
+      type: String,
+    },
+    Assign_Students: [
+      {
+        type: String,
+      },
+    ],
   },
   { timestamps: true }
 );

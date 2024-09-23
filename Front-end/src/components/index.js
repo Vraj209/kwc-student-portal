@@ -13,7 +13,7 @@ import MaleStudent from "./Dashboard/MaleStudent";
 import FemaleStudent from "./Dashboard/FemaleStudent";
 import Satsangi from "./Dashboard/Satsangi";
 import MisStudent from "./Dashboard/MisStudent";
-
+import Pending from "./Pending_Students/Pending";
 export {
   Footer,
   Navbar,
@@ -30,4 +30,5 @@ export {
   FemaleStudent,
   Satsangi,
   MisStudent,
+  Pending,
 };
