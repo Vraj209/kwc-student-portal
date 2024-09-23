@@ -48,8 +48,8 @@ function StudyPermitHolder() {
     <div>
       <Sidebar />
       <div className="p-4 sm:ml-64">
-        <div className="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-green-500">
-          <p className="text-5xl text-white">Student Directory</p>
+        <div className="flex items-center justify-center h-48 mb-4 rounded bg-green-500">
+          <p className="text-5xl text-white">Study Permit Holder</p>
         </div>
         <div className="overflow-x-auto">
           <table className="w-full whitespace-nowrap">
