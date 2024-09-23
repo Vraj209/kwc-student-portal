@@ -38,9 +38,13 @@ function Dashboard() {
     { name: "Female", number: numberOfFemale, action: femaleStudent },
     { name: "Satsangi", number: numberOfSatsangi, action: satsangiStudent },
     { name: "MIS", number: numberOfMIS, action: misStudent },
-    { name: "Work Permit", number: workPermitHolder, action: workPermit },
     {
-      name: "Student Permit",
+      name: "Work Permit Holder",
+      number: workPermitHolder,
+      action: workPermit,
+    },
+    {
+      name: "Study Permit Holder",
       number: studentPermitHolder,
       action: studentPermit,
     },
